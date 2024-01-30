@@ -15,7 +15,7 @@
 <body>
 <h1>학생-등록</h1>
 <hr>
-<form action="/student/register.do" method="post">
+<form action="/student/register.do" method="post" accept-charset="UTF-8">
 <table>
     <tr>
         <td style="text-align: center">아이디</td>

@@ -9,15 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c9e43ea-2fd1-4e69-b7b5-5ff40bdd35c2" name="Changes" comment="">
+    <list default="true" id="5c9e43ea-2fd1-4e69-b7b5-5ff40bdd35c2" name="Changes" comment="file name change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/student/controller/ErrorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/student/servlet/ErrorServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/student/controller/FrontServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/student/servlet/FrontServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/student/controller/StudentDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/student/servlet/StudentDeleteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/student/controller/StudentListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/student/servlet/StudentListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/student/controller/StudentRegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/student/servlet/StudentRegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/student/controller/StudentUpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/student/servlet/StudentUpdateServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/student/controller/StudentViewServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/student/servlet/StudentViewServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/student/servlet/FrontServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/student/servlet/FrontServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/student/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/student/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/student/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/student/update.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,11 +166,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706330067188</updated>
-      <workItem from="1706330068479" duration="52784000" />
+      <workItem from="1706330068479" duration="53826000" />
     </task>
+    <task id="LOCAL-00001" summary="file name change">
+      <created>1706577053370</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706577053370</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="file name change" />
+    <option name="LAST_COMMIT_MESSAGE" value="file name change" />
   </component>
 </project>

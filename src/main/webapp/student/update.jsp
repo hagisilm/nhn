@@ -16,7 +16,7 @@
         action = /student/update
 -->
 
-<form method="post" action="/student/update.do">
+<form method="post" action="/student/update.do" accept-charset="UTF-8">
     <table>
         <tbody>
         <tr>
