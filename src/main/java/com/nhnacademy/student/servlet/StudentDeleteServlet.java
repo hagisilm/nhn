@@ -1,4 +1,4 @@
-package com.nhnacademy.student.controller;
+package com.nhnacademy.student.servlet;
 
 import com.nhnacademy.student.repository.StudentRepository;
 

@@ -1,4 +1,4 @@
-package com.nhnacademy.student.controller;
+package com.nhnacademy.student.servlet;
 
 import com.nhnacademy.student.model.Student;
 import com.nhnacademy.student.repository.StudentRepository;
@@ -10,19 +10,28 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
+import java.util.Objects;
 
-@WebServlet(name = "studentListServlet", urlPatterns = "/student/list")
-public class StudentListServlet extends HttpServlet {
+@WebServlet(name = "studentViewServlet", urlPatterns = "/student/view")
+public class StudentViewServlet extends HttpServlet {
     private StudentRepository studentRepository;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Student> studentList = studentRepository.getStudents();
-        req.setAttribute("studentList",studentList);
+        String id = req.getParameter("id");
 
-//        req.getRequestDispatcher("/student/list.jsp").forward(req,resp);
-        req.setAttribute("view","/student/list.jsp");
+        if (Objects.isNull(id)) {
+            throw new RuntimeException("Parameter [id] is null");
+        }
+
+        Student student = studentRepository.getStudentById(id);
+
+
+        req.setAttribute("student", student);
+//        req.getRequestDispatcher("/student/view.jsp").forward(req,resp);
+        req.setAttribute("view","/student/view.jsp");
+
+
     }
 
     @Override

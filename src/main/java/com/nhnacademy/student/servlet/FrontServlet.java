@@ -1,4 +1,4 @@
-package com.nhnacademy.student.controller;
+package com.nhnacademy.student.servlet;
 
 import lombok.extern.slf4j.Slf4j;
 

@@ -1,4 +1,4 @@
-package com.nhnacademy.student.controller;
+package com.nhnacademy.student.servlet;
 
 import com.nhnacademy.student.model.Gender;
 import com.nhnacademy.student.model.Student;
@@ -12,22 +12,27 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "studentRegisterServlet", urlPatterns = "/student/register")
-public class StudentRegisterServlet extends HttpServlet {
+@WebServlet(name = "studentUpdateServlet", urlPatterns = "/student/update")
+public class StudentUpdateServlet extends HttpServlet {
     private StudentRepository studentRepository;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        req.getRequestDispatcher("/student/register.jsp").forward(req,resp);
-        req.setAttribute("view","/student/register.jsp");
+        String id = req.getParameter("id");
+        Student student = studentRepository.getStudentById(id);
+
+        // 학생 조회
+        if (student == null) {
+            resp.sendError(HttpServletResponse.SC_NOT_FOUND, "Student not found");
+            return;
+        }
+        req.setAttribute("student", student);
+//        req.getRequestDispatcher("/student/update.jsp").forward(req,resp);
+        req.setAttribute("view","/student/update.jsp");
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //todo null check
-        //todo save 구현
-        //todo redirect /student/view?id=student1
-
 
         String id = req.getParameter("id");
         String name = req.getParameter("name");
@@ -41,10 +46,9 @@ public class StudentRegisterServlet extends HttpServlet {
             return;
         }
         Student student = new Student(id, name, gender, age);
-        studentRepository.save(student);
-
+        studentRepository.update(student);
 //        resp.sendRedirect("/student/view?id=" + id);
-        req.setAttribute("view","redirect:/student/view.do?id=" + student.getId());
+        req.setAttribute("view","redirect:/student/view.do?id="+student.getId());
     }
 
     @Override
